@@ -40,9 +40,10 @@ Create React App:
 -> The create-react-app tool is an officially supported way to create React applications.
 -> Node.js is required to use create-react-app.
 
+
 -> Open your terminal in the directory you would like to create your application.
 
-Run this command to create a React application named my-react-app:
+-> Run this command to create a React application named my-react-app:
 npx create-react-app my-react-app
 
 -> create-react-app will set up everything you need to run a React application.
@@ -50,7 +51,8 @@ npx create-react-app my-react-app
 Note: If you've previously installed create-react-app globally, 
   it is recommended that you uninstall the package to ensure npx always uses the latest version of create-react-app. 
   
--> To uninstall, run this command: npm uninstall -g create-react-app.
+-> To uninstall, run this command: 
+      npm uninstall -g create-react-app.
 
 
 
@@ -63,7 +65,18 @@ cd my-react-app
 Run this command to execute the React application my-react-app:
 npm start
 
--> A new browser window will pop up with your newly created React App! If not, open your browser and type localhost:3000 in the address bar.
+-> A new browser window will pop up with your newly created React App! 
+-> If not, open your browser and type localhost:3000 in the address bar.
+
+
+
+
+What is a localhost 3000?
+
+-> Localhost:3000 is the URL adress at which your web app (during development) is accessible if you started it (with a command in the console, 
+    like for example: npm start). 
+-> Localhost means that it's your computer that is hosting the app, and it doesn't mean that it's accessible on other computers.
+
 
 
 
@@ -76,9 +89,10 @@ How does React Work?
 -> React finds out what changes have been made, and changes only what needs to be changed. 
 
 
-
 -> Start by including three scripts, the first two let us write React code in our JavaScripts, and the third, Babel, 
     allows us to write JSX syntax and ES6 in older browsers.
+
+
 
 Example:
 
@@ -113,7 +127,8 @@ Modify the React Application:
 
 So far so good, but how do I change the content?
 
-Look in the my-react-app directory, and you will find a src folder. Inside the src folder there is a file called App.js, open it and it will look like this:
+-> Look in the my-react-app directory, and you will find a src folder. 
+-> Inside the src folder there is a file called App.js, open it and it will look like this:
 
 /myReactApp/src/App.js:
 
@@ -128,12 +143,7 @@ function App() {
         <p>
           Edit <code>src/App.js</code> and save to reload.
         </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
+        <a className="App-link" href="https://reactjs.org" target="_blank" rel="noopener noreferrer">
           Learn React
         </a>
       </header>
@@ -216,7 +226,8 @@ class Car {
 }
 
 
--> Notice the case of the class name. We have begun the name, "Car", with an uppercase character. 
+-> Notice the case of the class name. 
+-> We have begun the name, "Car", with an uppercase character. 
 -> This is a standard naming convention for classes.
 
 
@@ -243,6 +254,8 @@ const mycar = new Car("Ford");
 Method in Classes:
 
 You can add your own methods in a class:
+
+
 Example
 
 Create a method named "present":
@@ -337,10 +350,10 @@ hello = () => "Hello World!";
 
 
 
-Note: This works only if the function has only one statement.
+Notes: 
+-> This works only if the function has only one statement.
 
-If you have parameters, you pass them inside the parentheses:
-
+-> If you have parameters, you pass them inside the parentheses:
 
 Arrow Function With Parameters:
 
@@ -358,6 +371,7 @@ hello = val => "Hello " + val;
 
 
 What About this?
+
 -> The handling of this is also different in arrow functions compared to regular functions.
 -> In short, with arrow functions there is no binding of this.
 -> In regular functions the this keyword represented the object that called the function, which could be the window, the document, a button or whatever.
@@ -367,9 +381,9 @@ What About this?
 
 Let us take a look at two examples to understand the difference.
 
-Both examples call a method twice, first when the page loads, and once again when the user clicks a button.
-The first example uses a regular function, and the second example uses an arrow function.
-The result shows that the first example returns two different objects (window and button), and the second example returns the Header object twice.
+-> Both examples call a method twice, first when the page loads, and once again when the user clicks a button.
+-> The first example uses a regular function, and the second example uses an arrow function.
+-> The result shows that the first example returns two different objects (window and button), and the second example returns the Header object twice.
 
 
 
@@ -477,7 +491,8 @@ Notes:
 -> const is a variable that once it has been created, its value can never change.
 -> const has a block scope.
 -> The keyword const is a bit misleading.
--> It does not define a constant value. It defines a constant reference to a value.
+-> It does not define a constant value. 
+-> It defines a constant reference to a value.
 
 
 
@@ -553,6 +568,7 @@ const suv = vehicles[2];
 After:
 
 -> Here is the new way of assigning array items to a variable:
+
 With destructuring:
 
 const vehicles = ['mustang', 'f-150', 'expedition'];
@@ -568,8 +584,10 @@ const vehicles = ['mustang', 'f-150', 'expedition'];
 
 const [car,, suv] = vehicles;
 
+
 Destructuring comes in handy when a function returns an array:
-Example
+
+Example:
 
 function calculate(a, b) {
   const add = a + b;
@@ -784,7 +802,7 @@ Import:
 -> Default exports do not.
 
 
-Import from named exports
+Import from named exports:
 
 Import named exports from the file person.js:
 
@@ -793,7 +811,7 @@ import { name, age } from "./person.js";
 
 
 
-Import from default exports
+Import from default exports:
 
 Import a default export from the file message.js:
 
@@ -844,7 +862,8 @@ The Render Function
 
 
 But render where?
--> There is another folder in the root directory of your React project, named "public". In this folder, there is an index.html file.
+-> There is another folder in the root directory of your React project, named "public". 
+-> In this folder, there is an index.html file.
 
 
 You'll notice a single <div> in the body of this file. This is where our React application will be rendered.
@@ -931,7 +950,7 @@ What is JSX?
 
 Coding JSX:
 
--> JSX allows us to write HTML elements in JavaScript and place them in the DOM without any createElement()  and/or appendChild() methods.
+-> JSX allows us to write HTML elements in JavaScript and place them in the DOM without any createElement() and/or appendChild() methods.
 -> JSX converts HTML tags into react elements.
 -> You are not required to use JSX, but JSX makes it easier to write React applications.
 
@@ -978,7 +997,7 @@ Expressions in JSX
 
 
 
-JSX will execute the expression and return the result:
+-> JSX will execute the expression and return the result:
 
 Example
 
@@ -1032,7 +1051,8 @@ const myElement = (
 
 Notes:
 -> JSX will throw an error if the HTML is not correct, or if the HTML misses a parent element.
--> Alternatively, you can use a "fragment" to wrap multiple lines. This will prevent unnecessarily adding extra nodes to the DOM.
+-> Alternatively, you can use a "fragment" to wrap multiple lines. 
+-> This will prevent unnecessarily adding extra nodes to the DOM.
 -> A fragment looks like an empty HTML tag: <></>.
 
 
@@ -1071,7 +1091,8 @@ Attribute class = className?
       and the class keyword is a reserved word in JavaScript, you are not allowed to use it in JSX.
 
 -> Use attribute className instead.
--> JSX solved this by using className instead. When JSX is rendered, it translates className attributes into class attributes.
+-> JSX solved this by using className instead. 
+-> When JSX is rendered, it translates className attributes into class attributes.
 
 
 
@@ -1095,6 +1116,8 @@ Conditions - if statements:
 Option 1:
 
 Write if statements outside of the JSX code:
+
+
 Example
 
 Write "Hello" if x is less than 10, otherwise "Goodbye":
@@ -1140,10 +1163,12 @@ React Components:
 
 React Components:
 
--> Components are independent and reusable bits of code. They serve the same purpose as JavaScript functions, but work in isolation and return HTML.
--> Components come in two types, Class components and Function components, in this tutorial we will concentrate on Function components.
+-> Components are independent and reusable bits of code. 
+-> They serve the same purpose as JavaScript functions, but work in isolation and return HTML.
+-> Components come in two types, Class components and Function components, we will concentrate on Function components.
 -> In older React code bases, you may find Class components primarily used. 
--> It is now suggested to use Function components along with Hooks, which were added in React 16.8. There is an optional section on Class components for your reference.
+-> It is now suggested to use Function components along with Hooks, which were added in React 16.8. 
+-> There is an optional section on Class components for your reference.
 
 
 
@@ -1176,10 +1201,9 @@ class Car extends React.Component {
 
 Function Component:
 
--> Here is the same example as above, but created using a Function component instead.
 -> A Function component also returns HTML, and behaves much the same way as a Class component, 
-      but Function components can be written using much less code, are easier to understand, and will be preferred in this tutorial.
-
+      but Function components can be written using much less code, are easier to understand, and will be preferred.
+      
 
 Example:
 
@@ -1369,7 +1393,7 @@ class Car extends React.Component {
 Use the color property in the render() function:
 
 
-Example
+Example:
 
 class Car extends React.Component {
   constructor() {
@@ -1646,7 +1670,9 @@ Lifecycle of Components:
 -> The three phases are: Mounting, Updating, and Unmounting.
 
 
-Mounting
+
+Mounting:
+
 -> Mounting means putting elements into the DOM.
 
 -> React has four built-in methods that gets called, in this order, when mounting a component:
